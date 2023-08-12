@@ -1,16 +1,20 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 
-const divb = document.getElementById("boton");
+const divb = document.getElementById("divb");
+const boton = document.getElementById("boton");
 
-function saludar(){
-    alert("Hola!")
+function saludar(event){
+    event.stopPropagation();
+    alert("Hola!");
 }
 
 function saludodiv(){
-    alert("Hola! Soy el div")
+    alert("Hola! Soy el div");
 }
 
-divb.addEventListener("click", saludodiv)
+boton.addEventListener("click", saludar);
+
+divb.addEventListener("click", saludodiv);
 
 
 });
